@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #box {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        #boxInBG {
+            position: absolute;
+            background-color: #2aa577;
+            height: 290px;
+            width: 171px;
+            top: 56px;
+            left: 14px;
+            z-index: 1;
+        }
+
+        #boxInDown,
+        #boxInDownBG {
+            position: absolute;
+            background-color: #212c39;
+            height: 30px;
+            width: 171px;
+            top: 56px;
+            left: 14px;
+            z-index: 2;
+        }
+        #boxInDownBG{
+            z-index: 0;
+            height: 290px;
+        }
+
+        img {
+            width: 200px;
+            height: 400px;
+        }
+
+        #num {
+            position: absolute;
+            top: 116px;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            color: white;
+            font-size: 60px;
+            z-index: 3;
+        }
+
+        #text {
+            position: absolute;
+            top: 180px;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            color: white;
+            font-size: 20px;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id='box'>
+            <img src="JUMP822BA.jpg" alt="">
+            <div id="boxInBG"></div>
+            <div id="boxInDown"></div>
+            <div id="boxInDownBG"></div>
+            <div id="num">2</div>
+            <div id="text">Minutes</div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            
+            let a = 2;
+
+            setInterval(function () {
+                $('#boxInDown').animate({
+                    height: '290px',
+                },60000).animate({
+                    height: '30px',
+                },60000)
+
+                $('#boxInBG').animate({
+                    opacity: '0',
+                },60000,function(){
+                    a--;
+                    $('#num').text(a);
+                }).animate({
+                    opacity: '1',
+                },60000,function(){
+                    a--;
+                    $('#num').text(a);
+                })
+            })
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .wrapper{
+            width: 500px;
+            min-height: 500px;
+            margin: 20px auto;
+            border: 1px solid black;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 30px;
+        }
+        input[type=button], button{
+            width: 150px;
+            height: 30px;
+            background-color: lightgreen;
+            border: 2px solid green;
+            border-radius: 7px;
+            outline: none;
+        }
+        input[type=button]{
+            margin-left: 30px;
+        }
+        button{
+            margin: 20px 0;
+        }
+        .addWord{
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+        input[type=text]{
+            width: 250px;
+            height: 40px;
+            padding: 0 20px;
+            border-radius: 7px;
+            outline: none;
+        }
+        textarea{
+            width: 100%;
+            resize: vertical;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <h2>Список заборонених слів</h2>
+    <div class="words"></div>
+    <div class="addWord">
+        <input type="text" placeholder="text..">
+        <input type="button" value="Додати слово">
+    </div>
+    <textarea name="text" id="text" cols="30" rows="10"></textarea>
+    <button type="button">Цензор</button>
+</div>
+
+
+
+
+<script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: 'Clock';
+            src: url("fonts/digital-7/digital-7.ttf");
+        }
+
+        .wrapper {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            background-color: #04040a;
+            font-family: 'Clock';
+        }
+
+        .s1, .s2, .s3 {
+            border: 1px solid darkgray;
+            width: 100%;
+            height: 30vh;
+            background-color: #030316;
+            color: #3d9eb4;
+        }
+
+        .s1 {
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .data {
+            font-size: 30px;
+        }
+
+        .time {
+            font-size: 80px;
+        }
+
+        .s2 {
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .right {
+            width: 200px;
+            height: 100px;
+            background-color: #03034d;
+            border: 1px solid darkgray;
+            border-radius: 7px;
+            overflow: auto;
+            padding: 5px 0 5px 20px;
+            margin-left: 20px;
+        }
+
+        .left {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            width: 230px;
+            margin-right: 20px;
+
+        }
+
+        .stopwatch {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .left > div > button {
+            width: 50px;
+            height: 30px;
+            background-color: transparent;
+            border: 2px solid #3d9eb4;
+            border-radius: 7px;
+            color: #3d9eb4;
+        }
+        .btn{
+            margin-top: 20px;
+        }
+
+        .s3{
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .s3_left, .s3_right{
+            height: inherit;
+            width: 200px;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .s3_right{
+            margin-left: 30px;
+        }
+        .s3_left{
+            margin-right: 30px;
+        }
+        .minute_btn{
+
+        }
+        .timer_btn{
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: space-between;
+            width: inherit;
+        }
+        .timer_btn>button, .minute_btn>button{
+            width: 60px;
+            height: 40px;
+            background-color: transparent;
+            border: 2px solid #3d9eb4;
+            border-radius: 7px;
+            color: #3d9eb4;
+            font-size: 20px;
+        }
+        .minute_btn>button{
+            font-size: 30px;
+        }
+        .timer{
+            font-size: 70px;
+        }
+        .minute{
+            font-size: 75px;
+        }
+        .minute_text{
+            font-size: 35px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <section class="s1">
+        <div class="data"></div>
+        <div class="time"></div>
+    </section>
+    <section class="s2">
+        <div class="left">
+            <div class="stopwatch">00:00:00:000</div>
+            <div class="btn">
+                <button type="button" value="start">start</button>
+                <button type="button" value="loop">loop</button>
+                <button type="button" value="stop">stop</button>
+                <button type="button" value="reset">reset</button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="loop"></div>
+        </div>
+    </section>
+    <section class="s3">
+        <div class="s3_left">
+            <div class="minute">25</div>
+            <div class="minute_text">minutes</div>
+            <div class="minute_btn">
+                <button type="button" class="plus">+</button>
+                <button type="button" class="minus">-</button>
+            </div>
+        </div>
+        <div class="s3_right">
+            <div class="timer">00:00</div>
+            <div class="timer_btn">
+                <button type="button" name="start">start</button>
+                <button type="button" name="stop">stop</button>
+                <button type="button" name="reset">reset</button>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="js.js"></script>
+</body>
+</html>

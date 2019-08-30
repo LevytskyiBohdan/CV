@@ -1,0 +1,130 @@
+<header id="header" class="container-fluid position-fixed pl-1 pr-2 pl-sm-3 pr-sm-3"
+    [ngClass]="{'bg-light': ThemeService.theme, 'bg-dark': !ThemeService.theme}">
+    <nav class="navbar navbar-expand-lg pr-1 pr-sm-3 pl-1 pl-sm-3 pt-1 pb-1 pt-lg-2 pt-lg-2"
+        [ngClass]="{'navbar-light bg-light': ThemeService.theme,'bg-dark navbar-dark': !ThemeService.theme}">
+        <a class="navbar-brand link pt-0 pb-0 pt-lg-2 pb-lg-2 mr-1 mr-sm-3" routerLink="/home">
+            <i class="fab fa-bootstrap d-inline-block align-top" style="font-size: 2rem"></i>
+            roker
+        </a>
+        <address id="mobile-menu" class="navbar-nav d-flex d-lg-none flex-column mr-3">
+            <a *ngFor="let item of headerContact" href="tel:{{item.phone}}"
+                class="nav-link m-0 p-0"><b>{{item.phone}}</b></a>
+            <a *ngFor="let item of headerContact" href="mailto:{{item.email}}" target="_top"
+                class="nav-link m-0 p-0">{{item.email}}</a>
+        </address>
+        <button id="menu-btn" class="navbar-toggler pr-1 pl-1 pr-sm-3 pl-sm-3" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item d-flex d-lg-none" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <a class="nav-link link" routerLinkActive="active" routerLink="/services">Послуги</a>
+                </li>
+                <li class="nav-item d-flex d-lg-none" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <a class="nav-link link" routerLinkActive="active" routerLink="/price">Ціни</a>
+                </li>
+                <li class="nav-item d-flex d-lg-none" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <a class="nav-link link" routerLinkActive="active" routerLink="/contacts">Контакти</a>
+                </li>
+                <li class="nav-item d-flex d-lg-none" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <a class="nav-link link" routerLinkActive="active" routerLink="/news">Новини</a>
+                </li>
+                <li class="nav-item d-flex d-lg-none" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <a class="nav-link link link" routerLinkActive="active" routerLink="/car">Оформлення транспортних
+                        засобів</a>
+                </li>
+                <li class="nav-item d-flex d-lg-none" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <a class="nav-link link" routerLinkActive="active" routerLink="/calculator">Калькулятор
+                        розмитнення</a>
+                </li>
+                <li class="nav-item d-flex d-lg-none" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <a class="nav-link link" routerLinkActive="active" routerLink="/import">Імпорт</a>
+                </li>
+                <li class="nav-item d-flex d-lg-none" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <a class="nav-link link" routerLinkActive="active" routerLink="/export">Експорт</a>
+                </li>
+                <li class="nav-item d-flex d-lg-none" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <a class="nav-link link" routerLinkActive="active" routerLink="/eur1">EUR.1</a>
+                </li>
+
+
+
+                <li class="nav-item d-none d-lg-flex">
+                    <a class="nav-link link" routerLinkActive="active" routerLink="/services">Послуги</a>
+                </li>
+                <li class="nav-item d-none d-lg-flex">
+                    <a class="nav-link link" routerLinkActive="active" routerLink="/price">Ціни</a>
+                </li>
+                <li class="nav-item d-none d-lg-flex">
+                    <a class="nav-link link" routerLinkActive="active" routerLink="/contacts">Контакти</a>
+                </li>
+                <li class="nav-item d-none d-lg-flex">
+                    <a class="nav-link link" routerLinkActive="active" routerLink="/news">Новини</a>
+                </li>
+                <!-- <li class="nav-item d-none d-lg-flex">
+                    <a class="nav-link link" routerLinkActive="active"
+                    routerLink="/car">Оформлення ТЗ</a>
+                </li>
+                <li class="nav-item d-none d-lg-flex">
+                    <a class="nav-link link" routerLinkActive="active" routerLink="/calculator">Калькулятор
+                        розмитнення</a>
+                </li>
+                <li class="nav-item d-none d-lg-flex">
+                    <a class="nav-link link" routerLinkActive="active" routerLink="/import">Імпорт</a>
+                </li>
+                <li class="nav-item d-none d-lg-flex">
+                    <a class="nav-link link" routerLinkActive="active" routerLink="/export">Експорт</a>
+                </li>
+                <li class="nav-item d-none d-lg-flex">
+                    <a class="nav-link link" routerLinkActive="active" routerLink="/eur1">EUR.1</a>
+                </li> -->
+
+
+                <!-- Desktop dropdown begin -->
+                <li class="nav-item dropdown d-none d-lg-block">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Детальніше
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item link d-block d-sm-none" routerLinkActive="active"
+                            routerLink="/car">Оформлення ТЗ</a>
+                        <a class="dropdown-item link d-none d-sm-block" routerLinkActive="active"
+                            routerLink="/car">Оформлення транспортних
+                            засобів</a>
+                        <a class="dropdown-item link" routerLinkActive="active" routerLink="/calculator">Калькулятор
+                            розмитнення</a>
+                        <a class="dropdown-item link" routerLinkActive="active" routerLink="/import">Імпорт</a>
+                        <a class="dropdown-item link" routerLinkActive="active" routerLink="/export">Експорт</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item link" routerLinkActive="active" routerLink="/eur1">EUR.1</a>
+                    </div>
+                </li>
+                <!-- Desktop dropdown end -->
+
+            </ul>
+
+            <!-- <div class="btn-group btn-group-toggle pt-3 pb-3 pr-0 pr-lg-5 pt-lg-0 pb-lg-0" data-toggle="buttons">
+                <label class="btn btn-secondary" (click)="themeToggle(true)" [ngClass]="{'active': ThemeService.theme}">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> <i class="far fa-sun"></i>
+                </label>
+                <label class="btn btn-secondary" (click)="themeToggle(false)"
+                    [ngClass]="{'active': !ThemeService.theme}">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> <i class="fas fa-moon"></i>
+                </label>
+            </div> -->
+
+            <address id="desktop-menu" class="navbar-nav d-none d-lg-flex flex-column mr-3">
+                <a *ngFor="let item of headerContact" href="tel:{{item.phone}}"
+                    class="nav-link m-0 p-0"><b>{{item.phone}}</b></a>
+                <a *ngFor="let item of headerContact" href="mailto:{{item.email}}" target="_top"
+                    class="nav-link m-0 p-0">{{item.email}}</a>
+            </address>
+        </div>
+
+    </nav>
+</header>
+
+<div class="repair"></div>

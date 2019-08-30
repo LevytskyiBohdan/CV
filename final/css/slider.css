@@ -1,0 +1,155 @@
+.wrapper {
+    height: inherit;
+    width: inherit;
+    position: relative;
+    /*border: 1px solid red;*/
+}
+.slider {
+    height: inherit;
+    overflow: hidden;
+    position: relative;
+    width: inherit;
+}
+.slides {
+    height: inherit;
+    opacity: 0;
+    position: absolute;
+    width: inherit;
+    z-index: 0;
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+    -moz-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+    -o-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+    transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4{
+    opacity: 1;
+    z-index: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+#slide1:checked ~  .active label:nth-child(2),
+#slide2:checked ~ .active label:nth-child(3),
+#slide3:checked ~ .active label:nth-child(4),
+#slide4:checked ~ .active label:nth-child(1){
+    width: 28px;
+    height: 40px;
+    background-image: url("../images/source_of_icons.png");
+    background-repeat: no-repeat;
+    background-position: -27px 0px;
+    position: absolute;
+    top: 80px;
+    left: 960px;
+    z-index: 100;
+    display: block;
+}
+
+#slide1:checked ~ .active label:nth-child(2):hover,
+#slide2:checked ~ .active label:nth-child(3):hover,
+#slide3:checked ~ .active label:nth-child(4):hover,
+#slide4:checked ~ .active label:nth-child(1):hover{
+    background-position: -27px -40px;
+}
+
+#slide1:checked ~ .active label:nth-child(4),
+#slide2:checked ~ .active label:nth-child(1),
+#slide3:checked ~ .active label:nth-child(2),
+#slide4:checked ~ .active label:nth-child(3){
+    width: 28px;
+    height: 40px;
+    background-image: url("../images/source_of_icons.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    top: 80px;
+    left: -60px;
+    z-index: 100;
+    display: block;
+}
+
+#slide1:checked ~ .active label:nth-child(4):hover,
+#slide2:checked ~ .active label:nth-child(1):hover,
+#slide3:checked ~ .active label:nth-child(2):hover,
+#slide4:checked ~ .active label:nth-child(3):hover{
+    background-position: 0 -39px;
+}
+
+.active label:after{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.wrapper > input {
+    display: none;
+}
+
+.wrapper .controls {
+    position: absolute;
+    top: 250px;
+    left: 230px;
+}
+
+.wrapper label {
+    cursor: pointer;
+    display: inline-block;
+    height: 14px;
+    margin: 25px 12px 0 16px;
+    position: relative;
+    width: 14px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: background ease-in-out .5s;
+    -moz-transition: background ease-in-out .5s;
+    -o-transition: background ease-in-out .5s;
+    transition: background ease-in-out .5s;
+}
+
+.wrapper label:hover,
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3),
+#slide4:checked ~ .controls label:nth-of-type(4){
+    background: white;
+    width: 14px;
+    height: 14px;
+}
+
+.wrapper label:after {
+    background-color: rgba(0, 0, 0, 0.3);
+    /*border: 2px solid #ddd;*/
+    content: " ";
+    display: block;
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+.active label:after{
+    background-color: rgba(0, 0, 0, 0);
+    display: none;
+}
+.active label:hover{
+    background-color: rgba(0, 0, 0, 0);
+}
+.active label{
+    transition: none;
+    border-radius: 0;
+    width: 0;
+    height: 0;
+    display: none;
+}

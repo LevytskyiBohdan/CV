@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="bootsrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+        .container-fluid {
+            min-width: 100vw;
+            min-height: 100vh;
+        }
+
+        .top {
+            height: 90px;
+            width: 100vw;
+            background-color: #696a6b;
+        }
+
+        .down {
+            height: calc(100vh - 90px);
+        }
+
+        #font-in {
+            top: -70px;
+            left: -321px;
+        }
+
+        .list-group-item:hover {
+            background-color: #e2e6ea;
+        }
+
+        .mainText {
+            padding: 20px;
+        }
+
+        #textColor .modal-body button[type=button], .bgcColorIn .btn-group button {
+            margin: 5px;
+        }
+
+        .bgcImgIn .btn-group button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <!--сірий блок початок-->
+    <div class="row">
+        <div class="main">
+            <div class="col top d-flex flex-row justify-content-center align-items-center">
+                <div class="btn-group mr-3" role="group" aria-label="Basic example">
+                    <button type="button" id="editBtn" class="btn btn-light"><i class="fas fa-code"></i></button>
+                </div>
+                <!--Стиль тексту-->
+                <div class="btn-group mr-3" role="group" aria-label="Basic example">
+                    <button type="button" id="bold" class="btn btn-light"><i class="fas fa-bold"></i></button>
+                    <!--жирний-->
+                    <button type="button" id="italic" class="btn btn-light"><i class="fas fa-italic"></i></button>
+                    <!--курсив-->
+                    <button type="button" id="underline" class="btn btn-light"><i class="fas fa-underline"></i></button>
+                    <!--нижнє підкреслення-->
+                    <button type="button" id="strikethrough" class="btn btn-light"><i class="fas fa-strikethrough"></i>
+                    </button><!--перекреслений текст-->
+                </div>
+                <!--Вирівнювання тексту-->
+                <div class="btn-group mr-3" role="group" aria-label="Basic example">
+                    <button type="button" id="textLeft" class="btn btn-light"><i class="fas fa-align-left"></i></button>
+                    <button type="button" id="textCenter" class="btn btn-light"><i class="fas fa-align-center"></i>
+                    </button>
+                    <button type="button" id="textRight" class="btn btn-light"><i class="fas fa-align-right"></i>
+                    </button>
+                </div>
+                <!--Шрифт-->
+                <div class="btn-group mr-3" role="group" aria-label="Basic example">
+                    <button type="button" id="font" class="btn btn-light"><i class="fas fa-font"></i>
+                        <div class="popover fade show" role="tooltip" id="fontWindow"
+                             style=" display: none; position: absolute; will-change: transform; top: -70px; left: -321px; transform: translate3d(226px, 111px, 0px);"
+                             x-placement="right">
+                            <div class="arrow" style="top: 34px;"></div>
+                            <h3 class="popover-header">Font</h3>
+                            <div class="popover-body">
+                                <ul class="list-group fontWindowIn">
+                                    <li class="btn btn-light" style="font-family: Arial">Arial</li>
+                                    <li class="btn btn-light" style="font-family: Georgia">Georgia</li>
+                                    <li class="btn btn-light" style="font-family: Impact">Impact</li>
+                                    <li class="btn btn-light" style="font-family: Tahoma">Tahoma</li>
+                                    <li class="btn btn-light" style="font-family: 'Times New Roman'">Times New Roman
+                                    </li>
+                                    <li class="btn btn-light" style="font-family: Verdana">Verdana</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </button>
+                    <!--Розмір шрифту-->
+                    <button type="button" id="heightText" class="btn btn-light"><i class="fas fa-text-height"></i>
+                        <div class="popover fade show" role="tooltip" id="heightTextWindow"
+                             style="display: none; position: absolute; will-change: transform; top: -70px; left: -321px; transform: translate3d(226px, 111px, 0px);"
+                             x-placement="right">
+                            <div class="arrow" style="top: 34px;"></div>
+                            <h3 class="popover-header">Font Size</h3>
+                            <div class="popover-body">
+                                <ul class="list-group heightTextWindowIn">
+                                    <li class="btn btn-light">12px <span style="font-size: 12px">Text</span></li>
+                                    <li class="btn btn-light">14px <span style="font-size: 14px">Text</span></li>
+                                    <li class="btn btn-light">16px <span style="font-size: 16px">Text</span></li>
+                                    <li class="btn btn-light">18px <span style="font-size: 18px">Text</span></li>
+                                    <li class="btn btn-light">20px <span style="font-size: 20px">Text</span></li>
+                                    <li class="btn btn-light">22px <span style="font-size: 22px">Text</span></li>
+                                    <li class="btn btn-light">25px <span style="font-size: 25px">Text</span></li>
+                                    <li class="btn btn-light">30px <span style="font-size: 30px">Text</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </button>
+                    <!--Колір тексту-->
+                    <button type="button" id="colors" class="btn btn-light" data-toggle="modal"
+                            data-target="#textColor"><i
+                            class="fas fa-palette"></i></button>
+                    <!--Колір фону-->
+                    <button type="button" id="images" class="btn btn-light" data-toggle="modal" data-target="#bgcColor">
+                        <i
+                                class="fas fa-image"></i></button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#login"><i
+                            class="fas fa-lock"></i></button>
+                </div>
+            </div>
+
+        </div>
+
+        <!--блок редагування HTML -->
+        <div class="edit" style="display: none">
+            <div class="col top d-flex flex-row justify-content-center align-items-center">
+                <div class="btn-group mr-3" role="group" aria-label="Basic example">
+                    <button type="button" id="save" class="btn btn-light"><i class="fas fa-save"></i></button>
+                    <button type="button" id="table" class="btn btn-light" data-toggle="modal"
+                            data-target="#tableModal"><i class="fas fa-table"></i></button>
+                    <button type="button" id="ol" class="btn btn-light" data-toggle="modal" data-target="#olModal"><i
+                            class="fas fa-list-ol"></i></button>
+                    <button type="button" id="ul" class="btn btn-light" data-toggle="modal" data-target="#ulModal"><i
+                            class="fas fa-list-ul"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--блок редагування HTML кінець-->
+    </div>
+    <!--сірий блок кінець-->
+
+    <div class="row mainText">
+        <div class="col mainTextCol">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cum eos harum nostrum soluta?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cum eos harum nostrum soluta?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cum eos harum nostrum soluta?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cum eos harum nostrum soluta?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cum eos harum nostrum soluta?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cum eos harum nostrum soluta?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cum eos harum nostrum soluta?</p>
+        </div>
+
+        <div class="modalWindow">
+            <!--Модальне вікно колір тексту-->
+            <div class="modal fade" id="textColor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Color of text</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body d-flex flex-column justify-content-center align-items-center">
+                            <div class="col d-flex flex-row justify-content-center align-items-center">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#38ba9b"
+                                            style="background-color:#38ba9b;width: 50px;height: 50px;"></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#2e9e84"
+                                            style="background-color:#2e9e84;width: 50px;height: 50px;"></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#45c971"
+                                            style="background-color:#45c971;width: 50px;height: 50px;"></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#39ab5f"
+                                            style="background-color:#39ab5f;width: 50px;height: 50px;"></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#4298db"
+                                            style="background-color:#4298db;width: 50px;height: 50px;"></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#3580b8"
+                                            style="background-color:#3580b8;width: 50px;height: 50px;"></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#995cb7"
+                                            style="background-color:#995cb7;width: 50px;height: 50px;"></button>
+                                </div>
+                            </div>
+                            <div class="col d-flex flex-row justify-content-center align-items-center">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#8d49ae"
+                                            style="background-color:#8d49ae;width: 50px;height: 50px;"></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#36485e"
+                                            style="background-color:#36485e;width: 50px;height: 50px;"></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#2d3e50"
+                                            style="background-color:#2d3e50;width: 50px;height: 50px;"></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#edc402"
+                                            style="background-color:#edc402;width: 50px;height: 50px;"></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#ee9e0b"
+                                            style="background-color:#ee9e0b;width: 50px;height: 50px;"></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#e28020"
+                                            style="background-color:#e28020;width: 50px;height: 50px;"></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#ce5800"
+                                            style="background-color:#ce5800;width: 50px;height: 50px;"></button>
+                                </div>
+                            </div>
+                            <div class="col d-flex flex-row justify-content-center align-items-center">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#e1513c"
+                                            style="background-color:#e1513c;width: 50px;height: 50px;"></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#bb3f27"
+                                            style="background-color:#bb3f27;width: 50px;height: 50px;"></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#edeff2"
+                                            style="background-color:#edeff2;width: 50px;height: 50px;"></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#bec2c6"
+                                            style="background-color:#bec2c6;width: 50px;height: 50px;"></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#96a6a6"
+                                            style="background-color:#96a6a6;width: 50px;height: 50px;"></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#808c8d"
+                                            style="background-color:#808c8d;width: 50px;height: 50px;"></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-light" value="#010001"
+                                            style="background-color:#010001;width: 50px;height: 50px;"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Модальне вікно фону-->
+            <div class="modal fade" id="bgcColor" tabindex="-1" role="dialog" aria-labelledby="bgcColorModal"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-light" value="colors">Colors</button>
+                                <button type="button" class="btn btn-light" value="images">Image</button>
+                                <button type="button" class="btn btn-light" value="files">Files</button>
+                            </div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="bgcColorIn">
+                            <div class="modal-body d-flex flex-column justify-content-center align-items-center">
+                                <div class="col d-flex flex-row justify-content-center align-items-center">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#38ba9b"
+                                                style="background-color:#38ba9b;width: 50px;height: 50px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#2e9e84"
+                                                style="background-color:#2e9e84;width: 50px;height: 50px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#45c971"
+                                                style="background-color:#45c971;width: 50px;height: 50px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#39ab5f"
+                                                style="background-color:#39ab5f;width: 50px;height: 50px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#4298db"
+                                                style="background-color:#4298db;width: 50px;height: 50px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#3580b8"
+                                                style="background-color:#3580b8;width: 50px;height: 50px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#995cb7"
+                                                style="background-color:#995cb7;width: 50px;height: 50px;"></button>
+                                    </div>
+                                </div>
+                                <div class="col d-flex flex-row justify-content-center align-items-center">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#8d49ae"
+                                                style="background-color:#8d49ae;width: 50px;height: 50px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#36485e"
+                                                style="background-color:#36485e;width: 50px;height: 50px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#2d3e50"
+                                                style="background-color:#2d3e50;width: 50px;height: 50px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#edc402"
+                                                style="background-color:#edc402;width: 50px;height: 50px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#ee9e0b"
+                                                style="background-color:#ee9e0b;width: 50px;height: 50px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#e28020"
+                                                style="background-color:#e28020;width: 50px;height: 50px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#ce5800"
+                                                style="background-color:#ce5800;width: 50px;height: 50px;"></button>
+                                    </div>
+                                </div>
+                                <div class="col d-flex flex-row justify-content-center align-items-center">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#e1513c"
+                                                style="background-color:#e1513c;width: 50px;height: 50px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#bb3f27"
+                                                style="background-color:#bb3f27;width: 50px;height: 50px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#edeff2"
+                                                style="background-color:#edeff2;width: 50px;height: 50px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#bec2c6"
+                                                style="background-color:#bec2c6;width: 50px;height: 50px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#96a6a6"
+                                                style="background-color:#96a6a6;width: 50px;height: 50px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#808c8d"
+                                                style="background-color:#808c8d;width: 50px;height: 50px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light" value="#010001"
+                                                style="background-color:#010001;width: 50px;height: 50px;"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bgcImgIn" style="display: none">
+                            <div class="modal-body d-flex flex-column justify-content-center align-items-center">
+                                <div class="col d-flex flex-row justify-content-center align-items-center">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light"
+                                                style="background: url('img/1.jpg'); background-size: 100% 100%; width: 120px; height: 120px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light"
+                                                style="background: url('img/2.jpg'); background-size: 100% 100%; width: 120px; height: 120px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light"
+                                                style="background: url('img/3.jpg'); background-size: 100% 100%; width: 120px; height: 120px;"></button>
+                                    </div>
+                                </div>
+                                <div class="col d-flex flex-row justify-content-center align-items-center">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light"
+                                                style="background: url('img/4.jpg'); background-size: 100% 100%; width: 120px; height: 120px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light"
+                                                style="background: url('img/5.jpg'); background-size: 100% 100%; width: 120px; height: 120px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light"
+                                                style="background: url('img/6.jpg'); background-size: 100% 100%; width: 120px; height: 120px;"></button>
+                                    </div>
+                                </div>
+                                <div class="col d-flex flex-row justify-content-center align-items-center">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light"
+                                                style="background: url('img/7.jpg'); background-size: 100% 100%; width: 120px; height: 120px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light"
+                                                style="background: url('img/8.jpg'); background-size: 100% 100%; width: 120px; height: 120px;"></button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light"
+                                                style="background: url('img/9.jpg'); background-size: 100% 100%; width: 120px; height: 120px;"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bgcFileIn col" style="display: none; margin: 30px 0">
+                            <div class="input-group mb-3 d-flex flex-row justify-content-center align-items-center">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile01">
+                                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Модальне вікно входу-->
+            <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="loginModalLabel">Color of text <span id="wrongPass" style="color: red; display: none">Неправильний логін/пароль</span><span id="truePass" style="color: green; display: none">Вхід виконано</span></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body d-flex flex-column justify-content-center align-items-center">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">Login</span>
+                                </div>
+                                <input type="text" class="form-control" id="logInForm" placeholder="username" aria-label="username"
+                                       aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon2">Password</span>
+                                </div>
+                                <input type="text" class="form-control" id="logInPass" placeholder="password" aria-label="password"
+                                       aria-describedby="basic-addon1">
+                            </div>
+                            <button type="button" id="singIn" style="width: 100%;" class="btn btn-secondary">Sing in
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Модальне вікно таблиці-->
+            <div class="modal fade" id="tableModal" tabindex="-1" role="dialog" aria-labelledby="tableModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="tableModalLabel">Table</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body d-flex flex-row justify-content-center align-items-center">
+
+                            <div class="col d-flex flex-column justify-content-between align-items-center"
+                                 style="height: 384px">
+                                <label for="basic-url">Count TR</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="basic-url"
+                                           aria-describedby="basic-addon3">
+                                </div>
+                                <label for="basic-ur2">Width of TD:</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="basic-ur2"
+                                           aria-describedby="basic-addon3">
+                                </div>
+                                <label for="basic-ur3">Width of border:</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="basic-ur3"
+                                           aria-describedby="basic-addon3">
+                                </div>
+                                <button type="reset" id="resetTable" style="width: 100%;" class="btn btn-danger">Reset
+                                </button>
+                            </div>
+
+                            <div class="col d-flex flex-column justify-content-between align-items-center" >
+                                <label for="basic-ur4">Count TD:</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="basic-ur4"
+                                           aria-describedby="basic-addon3">
+                                </div>
+                                <label for="basic-ur5">Height of TD:</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="basic-ur5"
+                                           aria-describedby="basic-addon3">
+                                </div>
+                                <label for="basic-ur6">Color of border:</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="basic-ur6"
+                                           aria-describedby="basic-addon3">
+                                </div>
+                                <label for="basic-ur7">Style of border:</label>
+                                <div class="input-group mb-3">
+                                    <select class="form-control" id="basic-ur7"
+                                            aria-describedby="basic-addon3">
+                                        <option value="solid" selected>solid</option>
+                                        <option value="double">double</option>
+                                        <option value="dashed">dashed</option>
+                                        <option value="dotted">dotted</option>
+                                    </select>
+                                </div>
+                                <button type="reset" id="createTable" style="width: 100%;" class="btn btn-success">Create
+                                    table
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Модальне вікно список нумерований-->
+            <div class="modal fade" id="olModal" tabindex="-1" role="dialog" aria-labelledby="olModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="olModalLabel">ol list</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body d-flex flex-column justify-content-center align-items-center">
+                            <label for="basic-urli1">Count li item</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" id="basic-urli1"
+                                       aria-describedby="basic-addon3">
+                            </div>
+                            <label for="basic-urli3">Style of border:</label>
+                            <div class="input-group mb-3">
+                                <select class="form-control" id="basic-urli3"
+                                        aria-describedby="basic-addon3">
+                                    <option value="upper-roman" selected>upper-roman</option>
+                                    <option value="lower-alpha">lower-alpha</option>
+                                    <option value="upper-alpha">upper-alpha</option>
+                                </select>
+                            </div>
+                            <button type="reset" id="createOl" style="width: 100%; " class="btn btn-success">Create list
+                            </button>
+                            <button type="reset" id="resetOl" style="width: 100%; margin: 20px 0 0 0" class="btn btn-danger">Reset
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Модальне вікно список маркований-->
+            <div class="modal fade" id="ulModal" tabindex="-1" role="dialog" aria-labelledby="ulModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ulModalLabel">ul list</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body d-flex flex-column justify-content-center align-items-center">
+                            <label for="basic-urli4">Count li item</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" id="basic-urli4"
+                                       aria-describedby="basic-addon3">
+                            </div>
+                            <label for="basic-urli5">Style of border:</label>
+                            <div class="input-group mb-3">
+                                <select class="form-control" id="basic-urli5"
+                                        aria-describedby="basic-addon3">
+                                    <option value="circle" selected>circle</option>
+                                    <option value="square">square</option>
+                                    <option value="disk">disk</option>
+                                </select>
+                            </div>
+                            <button type="reset" id="createUl" style="width: 100%; " class="btn btn-success">Create list
+                            </button>
+                            <button type="reset" id="resetUl" style="width: 100%; margin: 20px 0 0 0" class="btn btn-danger">Reset
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!---->
+</div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<script src="js.js"></script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

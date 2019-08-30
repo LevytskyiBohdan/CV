@@ -1,0 +1,823 @@
+@media screen and (max-width: 1320px){
+    .header{
+        height: 800px;
+    }
+    .container{
+        width: 768px;
+    }
+    /*------------------HEADER----------------------------------------------------------------------------------------------*/
+    /*--------menu-------------*/
+    .nav{
+        padding-bottom: 45px;
+        padding-left: 15px;
+        height: 244px;
+        flex-flow: column;
+    }
+    .nav a{
+        margin-left: 5px;
+    }
+    .nav menu a{
+        margin-left: 0;
+    }
+    /*--------overlay-------------*/
+    .overlay .flex_overlay{
+        width: 335px;
+        height: 180px;
+        padding-left: 25px;
+    }
+
+    .video iframe{
+        top: -23px;
+        left: 512px;
+    }
+
+    #slide1:checked ~ .active label:nth-child(2),
+    #slide2:checked ~ .active label:nth-child(3),
+    #slide3:checked ~ .active label:nth-child(4),
+    #slide4:checked ~ .active label:nth-child(1){
+        width: 28px;
+        height: 40px;
+        background-image: url("../images/source_of_icons.png");
+        background-repeat: no-repeat;
+        background-position: -27px 0px;
+        position: absolute;
+        top: 68px;
+        left: 745px;
+        z-index: 100;
+        display: block;
+    }
+
+    #slide1:checked ~ .active label:nth-child(4),
+    #slide2:checked ~ .active label:nth-child(1),
+    #slide3:checked ~ .active label:nth-child(2),
+    #slide4:checked ~ .active label:nth-child(3){
+        width: 28px;
+        height: 40px;
+        background-image: url("../images/source_of_icons.png");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        position: absolute;
+        top: 68px;
+        left: -90px;
+        z-index: 100;
+        display: block;
+    }
+
+    .wrapper .controls{
+        top: 195px;
+        left: 70px;
+    }
+
+    .overlay .overlay_img::after{
+        top: -88px;
+        left: 417px;
+    }
+    .overlay h2{
+        font-size: 48px;
+    }
+    .overlay h4{
+        font-size: 24px;
+    }
+    .overlay p{
+        font-size: 16px;
+    }
+    /*------------------MAIN----------------------------------------------------------------------------------------------*/
+    /*--------main_s1-------------*/
+    .main_s1 article{
+        width: 256px;
+        padding-left: 100px;
+    }
+    .main_s1 article h4{
+        font-size: 24px;
+    }
+    .main_s1 article p{
+        width: 151px;
+        height: 145px;
+    }
+    .main_s1 article a{
+        width: 151px;
+    }
+    .music, .talk, .repair{
+        left: 55px;
+    }
+    /*--------main_s2-------------*/
+    .main_s2 .article_1{
+        /* Style for "Layer 11 c" */
+        width: 313px;
+        height: 272px;
+        padding-left: 30px;
+    }
+
+    .animation_slider{
+        height: 272px;
+        width: 248px;
+    }
+    .animation_slider_in{
+        width: 992px;
+        height: 272px;
+    }
+    @keyframes slider {
+        0%{
+            top: 0;
+            left: 0;
+        }
+        13.3%{
+            top: 0;
+            left: 0px;
+        }
+        16.1%{
+            top: 0;
+            left: -248px;
+        }
+        29.4%{
+            top: 0;
+            left: -248px;
+        }
+        32.2%{
+            top: 0;
+            left: -496px;
+        }
+        45.5%{
+            top: 0;
+            left: -496px;
+        }
+        48.3%{
+            top: 0;
+            left: -744px;
+        }
+        61.6%{
+            top: 0;
+            left: -744px;
+        }
+        64.4%{
+            top: 0;
+            left: -496px;
+        }
+        77.7%{
+            top: 0;
+            left: -496px;
+        }
+        80.5%{
+            top: 0;
+            left: -248px;
+        }
+        93.8%{
+            top: 0;
+            left: -248px;
+        }
+        96.6%{
+            top: 0;
+            left: 0px;
+        }
+    }
+
+    .main_s2 .article_1 h4{
+        /* Style for "PingbulLer" */
+        width: 100px;
+        height: 42px;
+        font-size: 24px;
+    }
+    .main_s2 .article_1 p{
+        width: 248px;
+        height: 145px;
+        letter-spacing: -0.25px;
+    }
+    .main_s2 .article_2{
+        width: 435px;
+        height: 272px;
+        padding-bottom: 0;
+    }
+    .main_s2 .article_2 p{
+        /* Style for "Nunc turpi" */
+        width: 257px;
+        height: 41px;
+        overflow: hidden;
+    }
+    .main_s2 .article_2 a{
+        width: 300px;
+    }
+    .circle-1{
+        top: 69px;
+    }
+    .circle-2{
+        top: 127px;
+    }
+    .circle-3{
+        top: 186px;
+    }
+    .slider_point_black{
+        left: 118px;
+    }
+    /*--------main_s3-------------*/
+    .flex_main_s3{
+        width: 768px;
+    }
+    .partners{
+        background-image: url("../images/logos_768px.png");
+        width: 725px;
+    }
+    /*------------------FOOTER----------------------------------------------------------------------------------------------*/
+    /*--------footer_s1-------------*/
+    .flex_footer_s1{
+        width: 768px;
+    }
+    .flex_footer_s1 article{
+        width: 205px;
+    }
+    .flex_footer_s1 article h2{
+        font-size: 40px;
+    }
+    .flex_footer_s1 article h2 span{
+        font-size: 40px;
+    }
+    .flex_footer_s1 article h4{
+        font-size: 24px;
+    }
+    .flex_footer_s1 article p.little{
+        width: 205px;
+        height: 165px;
+    }
+    .flex_footer_s1 article p{
+        width: 205px;
+        height: 213px;
+    }
+    /*--------footer_s2-------------*/
+    .flex_footer_s2{
+        width: 768px;
+    }
+    .flex_footer_s2 menu{
+        width: 528px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px){
+    .header{
+        height: 548px;
+    }
+    .container{
+        width: 480px;
+    }
+    /*------------------HEADER----------------------------------------------------------------------------------------------*/
+    /*--------menu-------------*/
+    .nav{
+        padding-left: 0;
+        padding-right: 0;
+        height: 203px;
+    }
+    .nav a{
+        margin: 0 auto;
+    }
+    .nav .menu_desktop{
+        display: none;
+    }
+    .nav img{
+        display: block;
+        position: absolute;
+        top: 168px;
+        left: 216px;
+    }
+    .nav .menu_mobile{
+        display: flex;
+        flex-flow: column;
+        top: 130px;
+        left: 118px;
+        z-index: 100;
+    }
+    .menu_mobile a{
+        z-index: 101;
+    }
+    /*--------overlay-------------*/
+    .overlay{
+        height: 246px;
+    }
+    .overlay .flex_overlay{
+        width: 241px;
+        height: 55px;
+        padding-left: 25px;
+    }
+
+    .video iframe{
+        top: -42px;
+        left: 325px;
+        width: 113px;
+        height: 170px;
+    }
+
+    #slide1:checked ~ .active label:nth-child(2),
+    #slide2:checked ~ .active label:nth-child(3),
+    #slide3:checked ~ .active label:nth-child(4),
+    #slide4:checked ~ .active label:nth-child(1){
+        width: 28px;
+        height: 40px;
+        background-image: url("../images/source_of_icons.png");
+        background-repeat: no-repeat;
+        background-position: -27px 0px;
+        position: absolute;
+        top: -16px;
+        left: 417px;
+        z-index: 100;
+        display: block;
+    }
+
+    #slide1:checked ~ .active label:nth-child(4),
+    #slide2:checked ~ .active label:nth-child(1),
+    #slide3:checked ~ .active label:nth-child(2),
+    #slide4:checked ~ .active label:nth-child(3){
+        width: 28px;
+        height: 40px;
+        background-image: url("../images/source_of_icons.png");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        position: absolute;
+        top: -16px;
+        left: -48px;
+        z-index: 100;
+        display: block;
+    }
+
+    .wrapper .controls{
+        top: 70px;
+        left: 8px;
+    }
+
+    .overlay .overlay_img::after{
+        content: url("../images/Iphone4_480px.png");
+        top: -87px;
+        left: 258px;
+    }
+    .overlay h2{
+        font-size: 36px;
+    }
+    .overlay h4{
+        font-size: 18px;
+        /*margin-bottom: 10px;*/
+    }
+    .overlay p{
+        display: none;
+    }
+    /*--------main_s1-------------*/
+    .main_s1{
+        height: 598px;
+    }
+    .flex_main_s1{
+        height: 598px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        padding-bottom: 67px;
+        padding-top: 67px;
+    }
+    .main_s1 article{
+        padding-left: 0;
+        width: 365px;
+        margin-top: 0px;
+    }
+    .main_s1 article p{
+        width: 364px;
+        height: 70px;
+    }
+    .main_s1 article a{
+        width: 364px;
+    }
+    .music, .repair, .talk{
+        left: -42px;
+    }
+    /*--------main_s2-------------*/
+    .main_s2{
+        height: 785px;
+    }
+    .flex_main_s2{
+        height: 785px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 70px 0;
+    }
+    .main_s2 .article_1{
+        width: 416px;
+        height: 290px;
+        padding-bottom: 45px;
+    }
+
+
+    .animation_slider{
+        height: 290px;
+        width: 346px;
+    }
+    .animation_slider_in{
+        width: 1384px;
+        height: 290px;
+    }
+    @keyframes slider {
+        0%{
+            top: 0;
+            left: 0;
+        }
+        13.3%{
+            top: 0;
+            left: 0px;
+        }
+        16.1%{
+            top: 0;
+            left: -346px;
+        }
+        29.4%{
+            top: 0;
+            left: -346px;
+        }
+        32.2%{
+            top: 0;
+            left: -692px;
+        }
+        45.5%{
+            top: 0;
+            left: -692px;
+        }
+        48.3%{
+            top: 0;
+            left: -1038px;
+        }
+        61.6%{
+            top: 0;
+            left: -1038px;
+        }
+        64.4%{
+            top: 0;
+            left: -692px;
+        }
+        77.7%{
+            top: 0;
+            left: -692px;
+        }
+        80.5%{
+            top: 0;
+            left: -346px;
+        }
+        93.8%{
+            top: 0;
+            left: -346px;
+        }
+        96.6%{
+            top: 0;
+            left: 0px;
+        }
+    }
+
+
+    .main_s2 .article_1 h4{
+        width: 300px;
+        height: 22px;
+        font-size: 30px;
+    }
+     .main_s2 .article_1 p{
+         /* Style for "“Nunc turp" */
+         width: 346px;
+         height: 170px;
+     }
+     .slider_point_black{
+         left: 169px;
+     }
+     /*--------main_s3-------------*/
+     .main_s3{
+         height: 233px;
+     }
+     .flex_main_s3{
+         height: 233px;
+         width: 480px;
+     }
+     .partners{
+         background-image: url("../images/logos_480px.png");
+         width: 345px;
+         height: 154px;
+     }
+    /*------------------FOOTER----------------------------------------------------------------------------------------------*/
+    /*--------footer_s1-------------*/
+    .footer_s1{
+        height: 665px;
+    }
+    .flex_footer_s1{
+        height: 665px;
+        width: 480px;
+        display: flex;
+        flex-flow: column;
+        align-content: center;
+        align-items: center;
+        padding: 60px 0 60px 0;
+    }
+    .flex_footer_s1 article{
+        width: 440px;
+    }
+    .flex_footer_s1 article h2{
+        font-size: 40px;
+    }
+    .flex_footer_s1 article h2 span{
+        font-size: 40px;
+    }
+    .flex_footer_s1 article h4{
+        font-size: 24px;
+    }
+    .flex_footer_s1 article p.little{
+        width: 440px;
+        height: 90px;
+    }
+    .flex_footer_s1 article p{
+        width: 440px;
+        height: 90px;
+    }
+    /*--------footer_s2-------------*/
+    .flex_footer_s2{
+        width: 480px;
+        display: flex;
+        flex-flow: column;
+        padding: 25px 0;
+    }
+    .flex_footer_s2 menu{
+        width: 435px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .header{
+        height: 513px;
+    }
+    .container{
+        width: 320px;
+    }
+    /*------------------HEADER----------------------------------------------------------------------------------------------*/
+    /*--------menu-------------*/
+    .nav img{
+        top: 180px;
+        left: 137px;
+    }
+    .nav .menu_mobile{
+        top: 140px;
+        left: 38px;
+    }
+    /*--------overlay-------------*/
+    .overlay{
+        background-color: transparent;
+    }
+    .overlay .flex_overlay{
+        width: 265px;
+        height: 55px;
+        padding-left: 25px;
+    }
+    .overlay h2{
+        font-size: 36px;
+        padding-left: 20px;
+    }
+    .overlay h4{
+        font-size: 18px;
+        padding-left: 20px;
+    }
+    .overlay .overlay_img::after{
+        display: none;
+    }
+    .video{
+        display: none;
+    }
+    #slide1:checked ~ .active label:nth-child(2),
+    #slide2:checked ~ .active label:nth-child(3),
+    #slide3:checked ~ .active label:nth-child(4),
+    #slide4:checked ~ .active label:nth-child(1){
+        width: 28px;
+        height: 40px;
+        background-image: url("../images/source_of_icons.png");
+        background-repeat: no-repeat;
+        background-position: -27px 0px;
+        position: absolute;
+        top: -16px;
+        left: 250px;
+        z-index: 100;
+        display: block;
+    }
+
+    #slide1:checked ~ .active label:nth-child(4),
+    #slide2:checked ~ .active label:nth-child(1),
+    #slide3:checked ~ .active label:nth-child(2),
+    #slide4:checked ~ .active label:nth-child(3){
+        width: 28px;
+        height: 40px;
+        background-image: url("../images/source_of_icons.png");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        position: absolute;
+        top: -16px;
+        left: -41px;
+        z-index: 100;
+        display: block;
+    }
+
+    .wrapper .controls{
+        top: 70px;
+        left: 40px;
+    }
+    /*------------------MAIN----------------------------------------------------------------------------------------------*/
+    /*--------main_s1-------------*/
+    .main_s1{
+        height: 598px;
+    }
+    .flex_main_s1{
+        height: 598px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        padding-top: 67px;
+        padding-bottom: 67px;
+    }
+    .main_s1 article{
+        padding-left: 0;
+        width: 195px;
+        margin-top: 0px;
+    }
+    .main_s1 article p{
+        width: 195px;
+        height: 72px;
+    }
+    .main_s1 article a{
+        width: 195px;
+    }
+    .music, .repair, .talk{
+        left: -42px;
+    }
+    /*--------main_s2-------------*/
+    .main_s2 .article_1{
+        width: 256px;
+        height: 272px;
+        padding-bottom: 20px;
+    }
+
+
+    .animation_slider{
+        height: 272px;
+        width: 178px;
+    }
+    .animation_slider_in{
+        width: 712px;
+        height: 272px;
+    }
+    @keyframes slider {
+        0%{
+            top: 0;
+            left: 0;
+        }
+        13.3%{
+            top: 0;
+            left: 0px;
+        }
+        16.1%{
+            top: 0;
+            left: -178px;
+        }
+        29.4%{
+            top: 0;
+            left: -178px;
+        }
+        32.2%{
+            top: 0;
+            left: -356px;
+        }
+        45.5%{
+            top: 0;
+            left: -356px;
+        }
+        48.3%{
+            top: 0;
+            left: -534px;
+        }
+        61.6%{
+            top: 0;
+            left: -534px;
+        }
+        64.4%{
+            top: 0;
+            left: -356px;
+        }
+        77.7%{
+            top: 0;
+            left: -356px;
+        }
+        80.5%{
+            top: 0;
+            left: -178px;
+        }
+        93.8%{
+            top: 0;
+            left: -178px;
+        }
+        96.6%{
+            top: 0;
+            left: 0px;
+        }
+    }
+
+
+    .main_s2 .article_1 h4{
+        width: 100px;
+        height: 42px;
+        font-size: 24px;
+    }
+    .main_s2 .article_1 p{
+        /* Style for "“Nunc turp" */
+        width: 178px;
+        height: 175px;
+        letter-spacing: -0.45px;
+    }
+    .slider_point_black{
+        left: 93px;
+        top: 281px;
+    }
+    .main_s2 .article_2{
+        padding: 0;
+        width: 320px;
+        height: 300px;
+    }
+    .main_s2 .article_2 h4{
+        margin-left: 20px;
+    }
+    .main_s2 .article_2 p{
+        width: 235px;
+        height: 41px;
+        letter-spacing: -0.5px;
+        margin-left: 75px;
+    }
+    .circle-1{
+        top: 56px;
+        left: 10px;
+    }
+    .circle-2{
+        left: 10px;
+    }
+    .circle-3{
+        top: 201px;
+        left: 10px;
+    }
+    /*--------main_s3-------------*/
+    .main_s3{
+        height: 423px;
+    }
+    .flex_main_s3{
+        width: 320px;
+        height: 423px;
+    }
+    .partners{
+        background-image: url("../images/logos_320px.png");
+        background-repeat: no-repeat;
+        height: 300px;
+        width: 235px;
+    }
+    /*------------------FOOTER----------------------------------------------------------------------------------------------*/
+    /*--------footer_s1-------------*/
+    .footer_s1{
+        display: none;
+    }
+    /*--------footer_s2-------------*/
+    .flex_footer_s2{
+        width: 320px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+    .flex_footer_s2 menu{
+        display: none;
+    }
+}

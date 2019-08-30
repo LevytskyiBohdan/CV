@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="wrapper">
+    <section class="s1">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </section>
+    <section class="s2">
+        <form action="" name="editStyle">
+            <input type="button" class="edit" name="edit" value="edit">
+            <input type="button" class="style" name="style" value="style">
+        </form>
+    </section>
+    <section class="s3">
+        <div class="editBlock">
+            <form action="" name="textarea">
+                <textarea name="textareaIn" id="textarea" class="textarea" cols="70" rows="10"></textarea>
+                <input type="button" class="add" name="add" value="add">
+                <input type="button" class="save" name="save" value="save">
+            </form>
+        </div>
+        <div class="styleBlock">
+            <h4>Font Size</h4>
+            <form action="" name="fontSize">
+                <input type="radio" class="radio" name="radio" id="radio1" value="12">
+                <label for="radio1">12</label>
+                <input type="radio" class="radio" name="radio" id="radio2" value="14">
+                <label for="radio2">14</label>
+                <input type="radio" class="radio" name="radio" id="radio3" value="16">
+                <label for="radio3">16</label>
+                <input type="radio" class="radio" name="radio" id="radio4" value="18">
+                <label for="radio4">18</label>
+                <input type="radio" class="radio" name="radio" id="radio5" value="20">
+                <label for="radio5">20</label>
+            </form>
+            <h4>Font Family</h4>
+            <form action="" name="fontFamily" class="fontFamily">
+                <select name="selFF" id="selFF">
+                    <option value="Choose option" disabled selected>Choose option</option>
+                    <option value="cursive">cursive</option>
+                    <option value="fantasy">fantasy</option>
+                    <option value="monospace">monospace</option>
+                    <option value="sans-serif">sans-serif</option>
+                </select>
+            </form>
+            <form action="" name="colors" class="colors">
+                <input type="button" class="buttonColor" name="textColor" value="Color of Text">
+                <input type="button" class="buttonColor" name="bgColor" value="Background color">
+                <div class="chooseColorBG">
+                    <div class="red"></div>
+                    <div class="blue"></div>
+                    <div class="green"></div>
+                    <div class="orange"></div>
+                    <div class="grey"></div>
+                    <div class="pink"></div>
+                    <div class="brown"></div>
+                    <div class="violet"></div>
+                    <div class="coral"></div>
+                </div>
+                <div class="chooseColorText">
+                    <div class="red"></div>
+                    <div class="blue"></div>
+                    <div class="green"></div>
+                    <div class="orange"></div>
+                    <div class="grey"></div>
+                    <div class="pink"></div>
+                    <div class="brown"></div>
+                    <div class="violet"></div>
+                    <div class="coral"></div>
+                </div>
+            </form>
+            <h4>Font Weight</h4>
+            <form action="" name="fontWeight" class="fontWeight">
+                <input type="checkbox" class="checkbox" name="checkboxBold" id="checkbox1" value="bold">
+                <label for="checkbox1">Bold text</label>
+                <input type="checkbox" class="checkbox" name="checkboxItalic" id="checkbox2" value="italic">
+                <label for="checkbox2">Cursive text</label>
+            </form>
+        </div>
+    </section>
+    <section class="s4">
+        <h4>Choose what you want:</h4>
+        <form action="" name="addElement">
+            <input type="radio" class="radio" name="radio2" id="radio6" value="table">
+            <label for="radio6">table</label>
+            <input type="radio" class="radio" name="radio2" id="radio7" value="list">
+            <label for="radio7">list</label>
+        </form>
+        <form name="table" class="table">
+            <div class="countTR">
+                <label for="countTR">Count TR:</label>
+                <input type="text" placeholder="Count TR:" name="countTR" id="countTR">
+            </div>
+            <div class="countTD">
+                <label for="countTD">Count TD:</label>
+                <input type="text" placeholder="Count TD:" name="countTD" id="countTD">
+            </div>
+            <h5>Add style to your table:</h5>
+            <div class="widthTD">
+                <label for="widthTD">Width of TD:</label>
+                <input type="text" placeholder="Width of TD:" name="widthTD" id="widthTD">
+            </div>
+            <div class="heightTD">
+                <label for="heightTD">Height of TD:</label>
+                <input type="text" placeholder="Height TD:" name="heightTD" id="heightTD">
+            </div>
+            <div class="wtcBorder">
+                <label for="widthBorder">Width of border:</label>
+                <input type="text" placeholder="Width:" name="widthBorder" id="widthBorder">
+                <label for="typeBorder">Type of border:</label>
+                <select name="typeBorder" id="typeBorder">
+                    <option>solid</option>
+                    <option>dotted</option>
+                    <option>dashed</option>
+                    <option>double</option>
+                </select>
+                <label for="colorBorder">Color of border:</label>
+                <select name="colorBorder" id="colorBorder">
+                    <option>black</option>
+                    <option>red</option>
+                    <option>blue</option>
+                    <option>green</option>
+                </select>
+            </div>
+            <input type="button" name="createTable" class="createTable" value="Create table">
+        </form>
+        <form name="list" class="list">
+            <div>
+                <label for="countLi">Count LI:</label>
+                <input type="text" placeholder="Count LI:" name="countLi" id="countLi">
+            </div>
+            <div>
+                <label for="typeMarks">Type of marks:</label>
+                <select name="typyMarks" id="typeMarks">
+                    <option value="circle" selected>circle</option>
+                    <option value="disc">disc</option>
+                    <option value="square">square</option>
+                </select>
+                <!--<input type="text" placeholder="Type of marks:" name="typeMarks" id="typeMarks">-->
+            </div>
+            <input type="button" name="createList" class="createList" value="Create list">
+        </form>
+    </section>
+
+</div>
+
+
+<script src="js.js"></script>
+</body>
+</html>

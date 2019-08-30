@@ -1,0 +1,101 @@
+<footer class="container-fluid" [ngClass]="{'bg-dark': !ThemeService.theme, 'bg-light': ThemeService.theme}">
+    <div class="row pt-3">
+        <div class="col-12 col-sm-12 col-md-6 pt-2 pb-2 pl-2 pl-lg-5 pr-3 bd-callout bd-callout-info">
+            <h5 class="text-light">Контакти</h5>
+            <p class="text-light"><b>Львівська обл., Городоцький р-н, м. Городок</b></p>
+            <p class="text-light">ПН-ПТ: 9:00 - 18:00 | СБ, НД : Вихідний</p>
+            <p *ngFor="let item of footerContact" class="text-light">Телефон: <a href="tel:{{item.phone}}">{{item.phone}}</a></p>
+            <p class="text-light">Email: <a *ngFor="let item of footerContact" href="mailto: {{item.email}}">{{item.email}}</a></p>
+        </div>
+        <div class="navbar col-12 col-sm-12 col-md-6" [ngClass]="{'navbar-dark': !ThemeService.theme, 'navbar-light': ThemeService.theme}">
+            <div class="row d-none d-md-flex">
+                <div class="col-12 col-md-4">
+                    <ul class="navbar-nav mr-auto ">
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" routerLink="/home">Головна</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" routerLink="/services">Послуги</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" routerLink="/price">Ціни</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" routerLink="/contacts">Контакти</a></b>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <ul class="navbar-nav mr-auto ">
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" routerLink="/import">Імпорт</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" routerLink="/export">Експорт</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" routerLink="/eur1">EUR.1</a></b>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <ul class="navbar-nav mr-auto ">
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" routerLink="/calculator">Калькулятор</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" (click)="message()">Напишіть нам</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" target="_blank"
+                                    href="https://goo.gl/maps/59vAsdyju4nM4BQC8">Прокласти маршрут</a></b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row w-100 d-flex d-md-none">
+                <div class="col-5">
+                    <ul class="navbar-nav mr-auto ">
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" routerLink="/home">Головна</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" routerLink="/services">Послуги</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" routerLink="/price">Ціни</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" routerLink="/contacts">Контакти</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" routerLink="/import">Імпорт</a></b>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-7">
+                    <ul class="navbar-nav mr-auto ">
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" routerLink="/export">Експорт</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" routerLink="/eur1">EUR.1</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" routerLink="/calculator">Калькулятор</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" (click)="message()">Напишіть нам</a></b>
+                        </li>
+                        <li class="nav-item">
+                            <b><a class="nav-link link p-1" target="_blank"
+                                    href="https://goo.gl/maps/59vAsdyju4nM4BQC8">Прокласти маршрут</a></b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>

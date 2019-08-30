@@ -1,0 +1,315 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+body{
+    font-family: Calibri;
+}
+.wrapper{
+    width: 900px;
+    height: 600px;
+    /*border: 1px solid black;*/
+    margin: 0 auto;
+}
+.s1{
+    width: inherit;
+    height: 200px;
+    overflow: auto;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    margin: 20px 0 0 0;
+    padding: 30px;
+    border: 2px solid lightgray;
+}
+.s2{
+    height: 50px;
+    width: inherit;
+    /*border: 1px solid red;*/
+}
+.s2>form{
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-flow: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 340px;
+}
+.s2>form>input{
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+.s2 .edit{
+    background-color: #ffc107;
+}
+.s2 .style{
+    background-color: #17a2b8;
+}
+.s3{
+    width: inherit;
+    height: 325px;
+    /*border: 1px solid red;*/
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+}
+/*.s3>.editBlock{*/
+    /*width: inherit;*/
+    /*height: 325px;*/
+    /*!*border: 1px solid red;*!*/
+    /*background-color: #e9ecef;*/
+    /*padding: 20px;*/
+    /*border-radius: 5px;*/
+    /*border: 2px solid lightgray;*/
+/*}*/
+.s3 .textarea{
+    resize: none;
+    width: 100%;
+    height: 230px;
+
+}
+.s3 .editBlock input{
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 20px 0 0;
+    color: white;
+}
+.s3 .add{
+    background-color: #dc3545;
+}
+.s3 .save{
+    background-color: #28a745;
+}
+
+.s3 .styleBlock{
+    height: 285px;
+    width: 860px;
+    /*width: inherit;*/
+    /*height: inherit;*/
+    /*border: 1px solid red;*/
+    flex-flow: column;
+    justify-content: space-between;
+}
+.s3 .styleBlock form[name="fontSize"]{
+    display: flex;
+    flex-flow: row;
+    /*justify-content: center;*/
+    align-items: center;
+}
+.s3 .styleBlock form[name="fontSize"]>label{
+    margin: 0 15px 0 3px;
+}
+.s3 .fontFamily select{
+    width: 250px;
+    height: 35px;
+    font-family: "Times New Roman", sans-serif;
+    font-size: 16px;
+}
+.s3 .colors{
+    position: relative;
+}
+.s3 .colors>input{
+    width: 150px;
+    height: 35px;
+    background-color: #6c757d;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px 0 0;
+    color: white;
+    font-size: 16px;
+    font-family: "Times New Roman", sans-serif;
+}
+.s3 .colors .chooseColorText, .s3 .colors .chooseColorBG{
+    position: absolute;
+    top: -115px;
+    left: 403px;
+}
+.s3 form[name="fontWeight"]{
+    display: flex;
+    flex-flow: row;
+    /*justify-content: center;*/
+    align-items: center;
+}
+.s3 form[name="fontWeight"]>input{
+    width: 20px;
+    height: 20px;
+}
+.s3 form[name="fontWeight"]>label{
+    margin: 0 15px 0 5px;
+}
+
+
+.s4{
+    display: none;
+    flex-flow: column;
+    /*justify-content: space-between;*/
+    padding: 20px;
+    width: inherit;
+    height: 550px;
+    /*border: 1px solid red;*/
+    background-color: #e9ecef;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+}
+.s4 h4{
+    font-size: 28px;
+}
+.s4 form[name="addElement"]{
+    display: flex;
+    flex-flow: row;
+    /*justify-content: center;*/
+    align-items: center;
+    margin: 10px 0 0 0;
+}
+.s4 form[name="addElement"]>input{
+    width: 30px;
+    height: 30px;
+}
+.s4 form[name="addElement"]>label{
+    margin: 0 30px 0 10px;
+    font-size: 20px;
+
+}
+.s4 .table{
+    width: 860px;
+    height: 400px;
+    flex-flow: column;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.s4 .countTR, .s4 .countTD, .s4 .widthTD, .s4 .heightTD{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.s4 .countTR>input, .s4 .countTD>input, .s4 .widthTD>input, .s4 .heightTD>input{
+    width: 690px;
+    height: 35px;
+    border-radius: 5px;
+    padding: 0 0 0 20px;
+    border: 1px solid grey;
+    font-size: 18px;
+}
+.s4 .table h5{
+    font-size: 24px;
+}
+.s4 .wtcBorder{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.s4 .wtcBorder>input, .s4 .wtcBorder>select{
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    padding: 0 0 0 20px;
+    border: 1px solid grey;
+    font-size: 18px;
+}
+.s4 .wtcBorder>input{
+    margin: 0px 30px 0 16px;
+}
+.s4 .table>input[type="button"]{
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    /*margin: 20px 0 0 0;*/
+    font-size: 20px;
+    color: white;
+}
+.s4 .list{
+    width: 860px;
+    height: 200px;
+    flex-flow: column;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.s4 .list>div{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.s4 .list>div>input, .s4 .list>div>select{
+    width: 690px;
+    height: 35px;
+    border-radius: 5px;
+    padding: 0 0 0 20px;
+    border: 1px solid grey;
+    font-size: 18px;
+}
+.s4 .list>input[type="button"]{
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    /*margin: 20px 0 0 0;*/
+    font-size: 20px;
+    color: white;
+}
+
+
+.editBlock, .styleBlock{
+    display: none;
+}
+.chooseColorBG, .chooseColorText{
+    width: 180px;
+    height: 180px;
+    display: none;
+    flex-flow: row wrap;
+}
+.chooseColorBG>div, .chooseColorText>div{
+    width: 60px;
+    height: 60px;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.orange{
+    background-color: orange;
+}
+.grey{
+    background-color: grey;
+}
+.brown{
+    background-color: brown;
+}
+.violet{
+    background-color: violet;
+}
+.coral{
+    background-color: coral;
+}
+.pink{
+    background-color: pink;
+}
+
+.table, .list{
+    display: none;
+    flex-flow: column;
+}

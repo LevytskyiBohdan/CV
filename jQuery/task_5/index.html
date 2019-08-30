@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body{
+            background-color: #ba3e48;
+        }
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-color: white;
+        }
+        .progress-percentage{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 50px;
+            font-family: Verdana, sans-serif;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="box"></div>
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="plugin.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".box").circularProgress({
+            color: "white",
+            height: "350px",
+            width: "350px",
+            percent: 0,
+            starting_position: 0,
+        }).circularProgress('animate', 100, 2508);
+
+    })
+</script>
+</body>
+</html>

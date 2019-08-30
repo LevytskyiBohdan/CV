@@ -1,0 +1,92 @@
+<section class="container">
+    <div class="row pb-5" id="car">
+        <div class="col-12 pb-1 pt-3 s1 d-flex flex-column align-items-center justify-content-center">
+            <h2 class="text-center text-light mt-3 mt-lg-5">МИТНЕ ОФОРМЛЕННЯ</h2>
+            <h5 class="text-center text-light mb-5 mt-5">ТРАНСПОРТНИХ ЗАСОБІВ</h5>
+            <button class="btn btn-light mb-4" (click)="message()">ОТРИМАТИ БЕЗКОШТОВНУ
+                КОНСУЛЬТАЦІЮ</button><br>
+        </div>
+        <div class="col-12 pt-5 text-justify">
+            <h6><strong>Орієнтовна послідовність дій при ввезенні транспортного засобу в Україну фізичною
+                    особою:</strong></h6>
+            <ol>
+                <li class="mb-2 change">необхідно, укласти із продавцем авто договір купівлі-продажу або інший
+                    документ, що його замінює в якому зазначено вартість автомобіля та підтверджується право
+                    власності покупця;</li>
+                <li class="mb-2 change">зняти автомобіль з обліку в країні реєстрації;</li>
+                <li class="mb-2 change">оформити експортну декларацію;</li>
+                <li class="mb-2 change">здійснити передоплату митних платежів на рахунок митного органу в Україні;
+                </li>
+                <li class="mb-2 change">оформити попередню митну декларацію для громадян та ввезти автомобіль на
+                    територію України;</li>
+                <li class="mb-2 change">пройти сертифікацію транспортного засобу;</li>
+                <li class="mb-2 change">доставити авто у визначений митним органом термін до місця призначення;</li>
+                <li class="mb-2 change">здійснити митне оформлення автомобіля.</li>
+            </ol>
+            <h6><strong>До митного оформлення подаються наступні документи:</strong></h6>
+            <ol>
+                <li class="mb-2 change">вантажна митна декларація;</li>
+                <li class="mb-2 change">договір купівлі-продажу або інший документ, що його замінює;</li>
+                <li class="mb-2 change">рахунок-фактура (інвойс);</li>
+                <li class="mb-2 change">техпаспорт транспортного засобу;</li>
+                <li class="mb-2 change">акт митного огляду, складений при перетині кордону;</li>
+                <li class="mb-2 change">сертифікат відповідності;</li>
+                <li class="mb-2 change">висновок експерта про якісні та вартісні характеристики транспортного
+                    засобу;</li>
+                <li class="mb-2 change">фото автомобіля;</li>
+                <li class="mb-2 change">паспорт власника авто (закордонний, внутрішній);</li>
+                <li class="mb-2 change">ІПН власника авто;</li>
+                <li class="mb-2 change">за наявності, інші документи, що підтверджують вартість автомобіля.</li>
+            </ol>
+            <h5 class="text-danger">ВАЖЛИВО!!!</h5>
+            <p><b>Остаточний розрахунок належних митних платежів здійснюється в день подання вантажної митної
+                    декларації до оформлення.</b></p>
+            <p class="text-danger">Сума, яка була зарезервована за попередньою декларацією для громадян
+                (передоплата) може відрізнятися
+                від суми необхідних митних платежів в день митного оформлення:</p>
+            <ol>
+                <li><u><b>за рахунок коливання курсу валют</b></u> (якщо сплачена сума менша, то необхідно доплатити
+                    кошти яких не вистачає, якщо ця сума більша, то залишок повертається);</li>
+                <li><u><b>збільшення вартості транспортного засобу для цілей оподаткування</b></u> (якщо митний
+                    орган під час перевірки може аргументовано довести недостовірність заявленої фактурної вартості
+                    автомобіля, то приймає рішення про коригування заявленої вартості і відмовляє в оформленні).
+                </li>
+            </ol>
+            <p>Наступний крок – постановка автомобіля на облік у сервісному центрі МВС.</p>
+        </div>
+    </div>
+    <div class="row pb-5">
+        <div class="col-12 s6 pb-4 pb-lg-5 s2">
+            <form #form="ngForm" class="pt-3 pb-3 col-12 col-md-10 ml-auto mr-auto mt-3">
+                <div class="form-group">
+                    <p class="h4 text-light">Зв'яжіться з нами:</p>
+                </div>
+                <div class="form-group">
+                    <label class="text-light" for="name">Введіть ім'я</label>
+                    <input [(ngModel)]="name" name="name" (change)="validateName()" [ngClass]="{'is-invalid': className, 'is-valid': classNameOk}" type="text" class="form-control" id="name"
+                        aria-describedby="emailHelp" placeholder="ім'я..">
+                    <small *ngIf="className" id="emailHelp" class="form-text text-danger">Виправте помилку</small>
+                </div>
+                <div class="form-group">
+                    <label class="text-light" for="email">Введіть email</label>
+                    <input [(ngModel)]="email" name="email" (change)="validateEmail()" [ngClass]="{'is-invalid': classEmail, 'is-valid': classEmailOk}" type="email" class="form-control" id="email"
+                        aria-describedby="emailHelp" placeholder="пошта..">
+                        <small *ngIf="classEmail" id="emailHelp" class="form-text text-danger">Виправте помилку</small>
+                </div>
+                <div class="form-group">
+                    <label class="text-light" for="phone">Введіть номер телефону</label>
+                    <input [(ngModel)]="phone" name="phone" (change)="validatePhone()" [ngClass]="{'is-invalid': classPhone, 'is-valid': classPhoneOk}" type="text" class="form-control" id="phone"
+                        aria-describedby="emailHelp" placeholder="телефон..">
+                        <small *ngIf="classPhone" id="emailHelp" class="form-text text-danger">Виправте помилку</small>
+                </div>
+                <div class="form-group">
+                    <label class="text-light" for="textarea">Введіть ваше запитання</label>
+                    <textarea [(ngModel)]="messageText" name="messageText" (change)="validateMessage()"  [ngClass]="{'is-invalid': classMessage, 'is-valid': classMessageOk}" class="form-control" id="textarea" rows="3"></textarea>
+                    <small *ngIf="classMessage" id="emailHelp" class="form-text text-danger">Виправте помилку. Мінімальна кількість символів - 30</small>
+                </div>
+                <button type="button" style="background: #791111" class="btn btn-block text-light" (click)="sendMessage(form)">Надіслати
+                    повідомлення</button>
+            </form>
+        </div>
+    </div>
+</section>

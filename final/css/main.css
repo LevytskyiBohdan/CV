@@ -1,0 +1,697 @@
+@import "reset-css.css";
+@import "sprites.css";
+@import "slider.css";
+
+@font-face {
+    font-family: "League Gothic";
+    src: url("../fonts/League-Gothic/LeagueGothic-Regular.otf");
+}
+@font-face{
+    font-family: "Open Sans Light";
+    src: url("../fonts/Open_Sans/OpenSans-Light.ttf");
+}
+@font-face{
+    font-family: "Open Sans";
+    src: url("../fonts/Open_Sans/OpenSans-Bold.ttf");
+}
+/*------------------HEADER----------------------------------------------------------------------------------------------*/
+.header{
+    background-image: url("../images/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 846px;
+}
+.container{
+    /*min-height: 100px;*/
+    width: 960px;
+    margin: 0 auto;
+    /*border: 1px solid lime;*/
+    /*padding-top: 70px;*/
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 400px;
+    padding-top: 77px;
+}
+
+.nav{
+    padding-top: 70px;
+    height: 280px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    position: relative;
+}
+.nav a{
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    font-family: "League Gothic";
+    font-size: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    /*margin-right: 160px;*/
+    transition: 2s;
+}
+.nav a:hover{
+    font-size: 70px;
+    /*margin-right: 80px;*/
+}
+.nav a span{
+    background: -webkit-linear-gradient(#33263a, #745083);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.nav .menu_desktop{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 631px;
+    height: 48px;
+    transition: none;
+}
+.nav .menu_desktop a{
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
+    font-size: 24px;
+    height: 33px;
+    line-height: 33px;
+    margin-right: 0;
+    padding: 0 5px 0 5px;
+    transition: none;
+    /*transition: 0.7s;*/
+}
+.nav .menu_desktop a:hover{
+    border-bottom: 3px solid #edbfff;
+    /*transition: 0.7s;*/
+}
+.active_page{
+    border-bottom: 3px solid #edbfff;
+}
+.nav img{
+    display: none;
+}
+.nav .menu_mobile{
+    position: absolute;
+    display: none;
+    height: 42px;
+    width: 244px;
+    overflow: hidden;
+    padding: 1px 3px 0 3px;
+    transition: 0.7s;
+}
+.nav .menu_mobile:hover{
+    height: 257px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #051116;
+    border-radius: 5px;
+    background-color: rgba(54,41,62,0.9);
+    transition: 0.7s;
+
+}
+.nav .menu_mobile a{
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
+    font-size: 24px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    margin-right: 0;
+    padding: 0 5px 0 5px;
+    transition: none;
+}
+.nav .menu_mobile a:hover{
+    box-shadow: inset 0 -1px 0 rgba(105, 82, 114, 0.59);
+    background-color: rgba(53,39,61,0.9);
+    border-top: 1px solid rgba(82,63,90,0.9);
+    border-bottom: 3px solid rgba(237,191,255,0.9);
+}
+/*--------overlay-------------*/
+.overlay .flex_overlay{
+    width: 502px;
+    height: 245px;
+    display: flex;
+    flex-flow: column;
+    /*margin-top: 77px;*/
+}
+.overlay .overlay_img{
+    position: relative;
+}
+.overlay .overlay_img::after{
+    content: url("../images/iphone_4.png");
+    display: block;
+    position: absolute;
+    top: -98px;
+    left: 605px;
+}
+.video{
+    position: relative;
+}
+.video iframe{
+    position: absolute;
+    top: -33px;
+    left: 700px;
+    opacity: 0;
+    transition: 2s;
+    height: 242px;
+    width: 161px;
+}
+.video iframe:hover{
+    opacity: 1;
+}
+.img_slider{
+    position: relative;
+}
+.overlay h2, .not_overlay h2{
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    color: #fefefe;
+    font-family: "League Gothic";
+    font-size: 60px;
+    font-weight: 400;
+}
+.overlay h4, .not_overlay h4{
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    color: #edbfff;
+    font-family: "League Gothic";
+    font-size: 32px;
+    font-weight: 400;
+}
+.overlay p, .not_overlay p{
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    font-family: "Open Sans Light";
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: -0.45px;
+    padding: 7px 10px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+/*------------------MAIN----------------------------------------------------------------------------------------------*/
+.main_s1{
+    height: 342px;
+    background-image: linear-gradient(to top, #322539 0%, #745083 100%);
+}
+/*--------main_s1-------------*/
+.flex_main_s1{
+    height: 342px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+.main_s1 article{
+    padding-left: 94px;
+    /*height: inherit;*/
+    width: 320px;
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+}
+.main_s1 article h4{
+    text-shadow: 1px 1px 0 #0f1518;
+    color: #ffffff;
+    font-family: "League Gothic";
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.main_s1 article p{
+    width: 223px;
+    height: 122px;
+    text-shadow: 1px 1px 0 #0f1518;
+    color: #ffffff;
+    font-family: "Open Sans Light";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    overflow: hidden;
+    text-align: justify;
+    letter-spacing: -0.45px;
+    margin-top: 10px;
+}
+.main_s1 article a{
+    width: 223px;
+    text-shadow: 1px 1px 0 #0f1518;
+    color: #ffffff;
+    font-family: "League Gothic";
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: right;
+    text-decoration: none;
+    margin-top: 18px;
+    transition: 0.7s;
+}
+.main_s1 article a:hover{
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+.music{
+    width: 30px;
+    height: 29px;
+    background-image: url("../images/source_of_icons.png");
+    background-repeat: no-repeat;
+    background-position: -489px -8px;
+    position: absolute;
+    top: 10px;
+    left: 40px;
+}
+.repair{
+    width: 29px;
+    height: 29px;
+    background-image: url("../images/source_of_icons.png");
+    background-repeat: no-repeat;
+    background-position: -407px -146px;
+    position: absolute;
+    top: 10px;
+    left: 40px;
+}
+.talk{
+    width: 32px;
+    height: 27px;
+    background-image: url("../images/source_of_icons.png");
+    background-repeat: no-repeat;
+    background-position: -331px -272px;
+    position: absolute;
+    top: 10px;
+    left: 40px;
+}
+
+/*--------main_s2-------------*/
+.main_s2{
+    height: 485px;
+    background-color: #f9f9f9;
+}
+.flex_main_s2{
+    height: 485px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    padding-left: 25px;
+}
+
+.main_s2 .article_1{
+    background-image: url("../images/form.png");
+    background-repeat: no-repeat;
+    background-size: 429px 292px;
+    height: 292px;
+    width: 429px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    padding: 28px 0 28px 38px;
+    position: relative;
+}
+
+.slider_point_black{
+    width: 91px;
+    height: 21px;
+    /*background-image: url("../images/source_of_icons.png");*/
+    background-repeat: no-repeat;
+    /*background-position: -54px -18px;*/
+    position: absolute;
+    top: 292px;
+    left: 165px;
+    animation: slider_point 20s infinite;
+}
+@keyframes slider_point {
+    0%{
+        background-image: url("../images/first_point.png");
+    }
+    13.3%{
+        background-image: url("../images/first_point.png");
+    }
+    16.1%{
+        background-image: url("../images/second_point.png");
+    }
+    29.4%{
+        background-image: url("../images/second_point.png");
+    }
+    32.2%{
+        background-image: url("../images/third_point.png");
+    }
+    45.5%{
+        background-image: url("../images/third_point.png");
+    }
+    48.3%{
+        background-image: url("../images/fourth_point.png");
+    }
+    61.6%{
+        background-image: url("../images/fourth_point.png");
+    }
+    64.4%{
+        background-image: url("../images/third_point.png");
+    }
+    77.7%{
+        background-image: url("../images/third_point.png");
+    }
+    80.5%{
+        background-image: url("../images/second_point.png");
+    }
+    93.8%{
+        background-image: url("../images/second_point.png");
+    }
+    100%{
+        background-image: url("../images/first_point.png");
+    }
+}
+.photo{
+    width: 50px;
+    height: 51px;
+    background-image: url("../images/source_of_icons.png");
+    background-repeat: no-repeat;
+    background-position: -3px -502px;
+    position: absolute;
+    top: 26px;
+    left: -25px;
+    
+}
+.animation_slider{
+    height: 292px;
+    width: 346px;
+    overflow: hidden;
+    position: relative;
+}
+.animation_slider_in{
+    width: 1384px;
+    height: 292px;
+    display: flex;
+    flex-flow: row;
+    animation-name: slider;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+@keyframes slider {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    13.3%{
+        top: 0;
+        left: 0px;
+    }
+    16.1%{
+        top: 0;
+        left: -346px;
+    }
+    29.4%{
+        top: 0;
+        left: -346px;
+    }
+    32.2%{
+        top: 0;
+        left: -692px;
+    }
+    45.5%{
+        top: 0;
+        left: -692px;
+    }
+    48.3%{
+        top: 0;
+        left: -1038px;
+    }
+    61.6%{
+        top: 0;
+        left: -1038px;
+    }
+    64.4%{
+        top: 0;
+        left: -692px;
+    }
+    77.7%{
+        top: 0;
+        left: -692px;
+    }
+    80.5%{
+        top: 0;
+        left: -346px;
+    }
+    93.8%{
+        top: 0;
+        left: -346px;
+    }
+    96.6%{
+        top: 0;
+        left: 0px;
+    }
+}
+.article_1 h4, .article_2 h4{
+    text-shadow: 1px 1px 0 #ffffff;
+    font-family: "League Gothic";
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #454545;
+}
+.article_1 h4 span{
+    color: #edbfff;
+}
+.article_1 p{
+    width: 346px;
+    height: 167px;
+    text-shadow: 1px 1px 0 #ffffff;
+    color: #454545;
+    font-family: "Open Sans Light";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    overflow: hidden;
+    margin-top: 16px;
+    letter-spacing: -0.45px;
+}
+.article_2{
+    width: 520px;
+    height: 292px;
+    padding: 28px 0 28px 90px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    position: relative;
+}
+.circle-1{
+    width: 49px;
+    height: 49px;
+    background-image: url("../images/source_of_icons.png");
+    background-repeat: no-repeat;
+    background-position: -216px -320px;
+    position: absolute;
+    top: 63px;
+    left: 19px;
+}
+.circle-2{
+    width: 49px;
+    height: 49px;
+    background-image: url("../images/source_of_icons.png");
+    background-repeat: no-repeat;
+    background-position: -145px -379px;
+    position: absolute;
+    top: 123px;
+    left: 19px;
+}
+.circle-3{
+    height: 49px;
+    width: 49px;
+    background-image: url("../images/source_of_icons.png");
+    background-repeat: no-repeat;
+    background-position: -74px -438px;
+    position: absolute;
+    top: 181px;
+    left: 19px;
+}
+.article_2 p{
+    text-shadow: 1px 1px 0 #ffffff;
+    color: #454545;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+}
+.article_2 p span{
+    text-shadow: 1px 1px 0 #ffffff;
+    color: #454545;
+    font-family: "Open Sans Light";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+.article_2 a{
+    /* Style for "READ MORE" */
+    width: 400px;
+    text-shadow: 1px 1px 0 #ffffff;
+    color: #454545;
+    font-family: "League Gothic";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: right;
+    transition: 0.7s;
+}
+.article_2 a:hover{
+    text-shadow: 0px 0px 15px #454545;
+}
+
+/*--------main_s3-------------*/
+
+.main_s3{
+    height: 120px;
+    background-color: #f9f9f9;
+    border: 1px solid #d8d8d8;
+}
+.flex_main_s3{
+    height: 120px;
+    width: 960px;
+    display: flex;
+    flex-flow: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.partners{
+    width: 775px;
+    height: 65px;
+    background-repeat: no-repeat;
+    background-image: url("../images/logos_960px.png");
+}
+
+
+
+
+
+
+/*------------------FOOTER----------------------------------------------------------------------------------------------*/
+/*--------footer_s1-------------*/
+.footer_s1{
+    height: 396px;
+    background-color: #ececec;
+}
+.flex_footer_s1{
+    height: 396px;
+    width: 960px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+.flex_footer_s1 article{
+    width: 277px;
+}
+.flex_footer_s1 article h2{
+    text-shadow: 0 1px 0 #ffffff;
+    color: #454545;
+    font-family: "League Gothic";
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.flex_footer_s1 article h2 span{
+    text-shadow: 0 1px 0 #ffffff;
+    color: #b9b9b9;
+    font-family: "League Gothic";
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.flex_footer_s1 article h6{
+    text-shadow: 1px 1px 0 #ffffff;
+    color: #c5c5c5;
+    font-family: Georgia;
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.flex_footer_s1 article h4{
+    text-shadow: 1px 1px 0 #ffffff;
+    color: #454545;
+    font-family: "League Gothic";
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.flex_footer_s1 article p{
+    width: 277px;
+    height: 190px;
+    text-shadow: 1px 1px 0 #ffffff;
+    color: #787878;
+    font-family: "Open Sans Light";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.flex_footer_s1 article p.little{
+    width: 277px;
+    height: 148px;
+}
+
+
+/*--------footer_s1-------------*/
+.footer_s2{
+    height: 114px;
+    background-image: url("../images/footer.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.flex_footer_s2{
+    height: 114px;
+    width: 960px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+.flex_footer_s2 menu{
+    width: 528px;
+    height: 34px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-content: center;
+}
+.flex_footer_s2 menu a{
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    font-family: "League Gothic";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 7px;
+}
+.flex_footer_s2 menu a:hover{
+    border-bottom: 3px solid #edbfff;
+}
+.flex_footer_s2 p{
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 12px;
+    font-family: "Open Sans Light";
+    font-weight: 300;
+    padding: 0 7px 0 7px;
+}
+.flex_footer_s2 p span{
+    font-family: "Open Sans";
+    font-weight: 400;
+}
